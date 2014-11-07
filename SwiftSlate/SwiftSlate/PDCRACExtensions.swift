@@ -27,6 +27,7 @@ public func <~ (rac: RAC, signal: RACSignal) -> RACDisposable {
     return signal ~> rac
 }
 
+infix operator ~> {}
 public func ~> (signal: RACSignal, rac: RAC) -> RACDisposable {
     return rac.assignSignal(signal)
 }
